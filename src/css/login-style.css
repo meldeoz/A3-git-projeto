@@ -23,33 +23,28 @@ body {
      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
      position: relative;
      overflow: hidden;
-     width: 768px;
+     height: 750px;
+     width: 900px;
      max-width: 100%;
      min-height: 480px;
 }
 
 .container p {
-     font-size: 14px;
-     line-height: 20px;
-     letter-spacing: 0.3px;
+     font-size: 24px;
+     line-height: 24px;
+     letter-spacing: 0.5px;
      margin: 20px 0;
 }
 
 .container span {
-     font-size: 12px;
+     font-size: 20px;
 }
+
 
 .container a {
-     color: #333;
-     font-size: 13px;
-     text-decoration: none;
-     margin: 15px 0 10px;
-}
-
-.container button {
      background-color: #ff5e00;
      color: #fff;
-     font-size: 12px;
+     font-size: 20px;
      padding: 10px 45px;
      border: 1px solid transparent;
      border-radius: 8px;
@@ -60,7 +55,7 @@ body {
      cursor: pointer;
 }
 
-.container button.hidden {
+.container a.hidden {
      background-color: transparent;
      border-color: #fff;
 }
@@ -115,6 +110,14 @@ body {
      opacity: 1;
      z-index: 5;
      animation: move 0.6s;
+}
+
+.container .esqueceu.senha{
+     color: #333;
+     font-size: 10px;
+     text-decoration: none;
+     margin: 15px 0 8px;
+     background-color: rgba(0, 0, 0, 0);
 }
 
 @keyframes move {
