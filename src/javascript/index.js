@@ -23,5 +23,7 @@ function desselecionarBotao() {
 
 const botaoLogin = document.querySelector(".btn.entrar")
 botaoLogin.addEventListener("click", () => {
-     location.href = "../login.html"
+     location.href = "\login.html"
 })
+
+

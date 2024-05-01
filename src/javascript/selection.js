@@ -12,3 +12,18 @@ ias.forEach((ia, index) => {
           grid.style.backgroundColor = colors[currentColorIndex];
      });
 });
+
+
+const queryString = window.location.search;
+const urlParams = new URLSearchParams(queryString);
+const name = urlParams.get('name');
+
+console.log(name); 
+
+
+
+// Selecione o elemento HTML com a classe "user-name"
+const userNameElement = document.querySelector(".user-name");
+
+// Atualize o conteúdo do elemento com o valor da variável 'username'
+userNameElement.textContent = name;
