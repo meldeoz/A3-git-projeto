@@ -120,6 +120,10 @@ body {
      background-color: rgba(0, 0, 0, 0);
 }
 
+.toggle-panel a{
+     margin-top: 83px;
+}
+
 @keyframes move {
 
      0%,

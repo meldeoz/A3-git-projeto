@@ -1,9 +1,9 @@
 body {
      overflow: hidden;
+     background-color: #000;
 }
 
-.item1,
-.item2 {
+.item1{
      grid-area: header1;
      height: 40px;
      display: flex;
@@ -16,6 +16,9 @@ body {
      grid-area: header2;
      height: 40px;
      font-size: 20px;
+     display: flex;
+     align-items: center;
+     justify-content: center;
 }
 
 a {

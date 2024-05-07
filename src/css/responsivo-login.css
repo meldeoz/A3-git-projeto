@@ -1,0 +1,251 @@
+@media (max-width: 910px) {
+     .container {
+          scale: 95%;
+     }
+}
+
+@media (max-width: 704px) {
+     .toggle-panel a {
+          position: relative;
+          bottom: 10px;
+     }
+}
+
+@media (max-width: 600px) {
+     #loginForm {
+          span {
+               text-align: center;
+          }
+
+          .esqueceu.senha {
+               text-align: center;
+          }
+
+          .toggle-panel a {
+               bottom: 7px;
+          }
+     }
+
+     #registerForm h1,
+     span {
+          text-align: center;
+     }
+}
+
+@media(max-width:480px) {
+     .toggle-panel a {
+          bottom: 34px;
+     }
+
+     #loginForm {
+          .esqueceu.senha {
+               font-size: 10px;
+               padding: 10px;
+          }
+
+          span {
+               font-size: 18px;
+               padding: 10px;
+               box-sizing: border-box;
+               width: 220px;
+          }
+     }
+
+     #registerForm {
+
+          h1,
+          span {
+               width: 200px;
+          }
+
+          input {
+               width: 200px;
+          }
+
+          a {
+               margin-top: 34px;
+          }
+     }
+}
+
+@media(max-width: 428px) {
+     .toggle-panel a {
+          top: -24px;
+          padding: 10px 25px;
+     }
+
+     .toggle-container {
+          h1 {
+               font-size: 1.8em;
+          }
+
+          .toggle-container p {
+               font-size: 18px;
+          }
+     }
+
+     #registerForm {
+          a {
+               padding: 10px 25px;
+               margin-top: 20px;
+          }
+
+          input {
+               width: 170px;
+          }
+     }
+}
+
+@media(max-width: 414px) {
+     .container {
+          height: 500px;
+     }
+
+     .toggle-panel {
+          a {
+               top: -19px;
+               padding: 10px 25px;
+          }
+
+          p {
+               font-size: 19px;
+          }
+     }
+
+     #loginForm {
+          span {
+               font-size: 14px;
+          }
+
+          .esqueceu.senha {
+               font-size: 10px;
+               padding: 10px;
+          }
+
+          input {
+               width: 170px;
+               margin-top: 15px;
+          }
+     }
+
+     .toggle-panel.toggle-left {
+          h1 {
+               position: relative;
+               top: 25px;
+          }
+
+          p {
+               position: relative;
+               top: 30px;
+          }
+
+          #login {
+               margin-top: 50px;
+          }
+     }
+}
+
+@media(max-width: 390px) {
+     .toggle-panel a {
+          margin-top: 98px;
+     }
+
+     .toggle-container {
+          h1 {
+               font-size: 1.5em;
+          }
+
+          p {
+               font-size: 16px;
+               margin-bottom: 0;
+               margin-top: 40px;
+          }
+     }
+
+     .toggle-panel.toggle-left {
+          padding: 10px;
+
+          #login {
+               position: relative;
+               top: 29px;
+          }
+     }
+}
+
+@media(max-width: 360px) {
+     .toggle-panel a {
+          margin-top: 66px;
+          padding: 10px 15px;
+     }
+
+     .toggle-container h1 {
+          font-size: 24px
+     }
+
+     #loginForm a {
+          padding: 10px 25px;
+
+     }
+
+     #registerForm {
+          span {
+               width: 150px;
+          }
+
+          input {
+               width: 150px;
+          }
+
+          a {
+               padding: 10px 17px;
+
+          }
+     }
+
+     .toggle-panel.toggle-left {
+          #login {
+               position: relative;
+               top: 41px;
+          }
+     }
+}
+
+@media(max-width: 320px) {
+     .toggle-panel a {
+          margin-top: 35px;
+          padding: 10px 10px;
+     }
+
+     #loginForm {
+          input {
+               width: 140px;
+               margin-top: 15px;
+          }
+
+          a {
+               padding: 10px 25px;
+
+          }
+     }
+
+     .toggle-container h1 {
+          font-size: 24px
+     }
+
+     #registerForm {
+          h1 {
+               width: 140px;
+          }
+
+          a {
+               padding: 10px 10px;
+          }
+     }
+
+     .toggle-panel.toggle-left {
+          #login {
+               top: 49px;
+          }
+     }
+
+}

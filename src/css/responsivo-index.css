@@ -1,6 +1,6 @@
 @media (max-width: 769px) {
      main::after {
-          background: linear-gradient(0deg, #000 20%, rgba(0, 0, 0, 0.00) 65%) no-repeat;
+          background: linear-gradient(0deg, peachpuff 20%, rgba(0, 0, 0, 0.00) 65%) no-repeat;
           width: 100vw;
      }
 
@@ -18,10 +18,12 @@
 
      .conteudo .nome-ia {
           font-size: 36px;
+          text-shadow: 1px 1px 2px whitesmoke, 0 0 1em whitesmoke, 0 0 0.2em white;
      }
 
      .conteudo .descricao {
           max-width: 500px;
+          text-shadow: 1px 1px 2px whitesmoke, 0 0 1em whitesmoke, 0 0 0.2em white;
      }
 
      .botoes {
@@ -32,34 +34,58 @@
      }
 
      .botoes .botao img {
-          max-width: 60px;
+          max-width: 90px;
+     }
+}
+
+@media (max-width: 500px) {
+     .botoes .botao img {
+          max-width: 75px;
+     }
+
+     .botoes .botao {
+          margin-bottom: 50px;
      }
 }
 
 @media (max-width: 425px) {
      main .ia .imagem {
-          height: auto;
+          height: 100
      }
 
      .conteudo .logo {
           width: 170px;
           height: 75px;
+          scale: 200%;
      }
 
      .conteudo {
-          top: -30%;
+          top: -16%;
      }
 
      .conteudo .nome-ia {
-          font-size: 24px;
+          font-size: 28px;
      }
 
      .botoes {
           padding: 20px;
-          top: -20%;
+          top: auto;
+          bottom: 0;
      }
 
      .botoes .botao img {
-          max-width: 50px;
+          max-width: 70px;
+     }
+}
+
+@media (max-width: 375px) {
+     .botoes .botao img {
+          max-width: 64px;
+     }
+}
+
+@media (max-width: 360px) {
+     .botoes .botao img {
+          max-width: 60px;
      }
 }
