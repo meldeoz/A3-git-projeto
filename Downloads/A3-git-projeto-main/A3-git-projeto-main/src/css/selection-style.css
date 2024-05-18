@@ -1,0 +1,165 @@
+body {
+     overflow: hidden;
+     background-color: #000;
+}
+
+.item1{
+     grid-area: header1;
+     height: 40px;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     font-size: 35px;
+}
+
+.item2 {
+     grid-area: header2;
+     height: 40px;
+     font-size: 20px;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+}
+
+a {
+     text-decoration: none;
+     color: #000;
+}
+
+.ias a {
+     text-decoration: none;
+     color: black;
+     border: 3px solid white;
+     padding: 5px;
+     border-radius: 10px;
+     cursor: pointer;
+}
+
+.item3 {
+     grid-area: menu;
+     height: 100vh;
+     width: auto;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+}
+
+.sidebar {
+     width: 150px;
+     font-size: 40px;
+}
+
+.perfil {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     width: auto;
+}
+
+.perfil .imagem {
+     position: relative;
+     bottom: 50px;
+     scale: 65%;
+     border-radius: 50%;
+}
+
+.user-name {
+     margin: auto;
+     position: relative;
+     bottom: 110px;
+}
+
+.ias {
+     position: relative;
+     bottom: 55px;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+}
+
+.ia:not(:last-child) {
+     margin-bottom: 50px;
+}
+
+.item4 {
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     grid-area: main;
+     width: auto;
+}
+
+.chat {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     height: 750px;
+     width: 100%;
+     position: relative;
+     bottom: 65px;
+}
+
+.mensagens {
+     height: 80%;
+     width: 90%;
+     border: black solid 2px;
+}
+
+.enviar {
+     display: flex;
+     justify-content: center;
+     width: 90%;
+}
+
+.input-mensagem {
+     width: 100%;
+}
+
+.btn-enviar {
+     height: 100%;
+
+
+}
+
+
+.grid-container {
+     display: grid;
+     grid-template-areas:
+          'header1 header1 header1 header1 header2 header2'
+          'menu main main main main main'
+          'menu main main main main main';
+     gap: 5px;
+     padding: 10px;
+}
+
+.grid-container>div {
+     background-color: rgba(255, 255, 255, 0.8);
+     text-align: center;
+     padding: 20px 0;
+     border-radius: 10px;
+}
+
+.ia.luizo:hover {
+     border-color: #9e1111;
+     background-color: #9e1111;
+     color: white;
+}
+
+.ia.magda:hover {
+     border-color: #1f6436;
+     background-color: #1f6436;
+     color: white;
+}
+
+.ia.joaquim:hover {
+     border-color: #8c7f10;
+     background-color: #8c7f10;
+     color: white;
+}
+
+.ia.vera:hover {
+     border-color: #1463a6;
+     background-color: #1463a6;
+     color: white;
+}
