@@ -8,3 +8,5 @@ Mário Sergio Vieira Felix - RA: 823124114
 Melissa de Sousa Lemos - RA: 823157771 
 
 Victoria Dos Santos Souza -  RA: 823128531
+
+Integração do chat adiconada no Master
