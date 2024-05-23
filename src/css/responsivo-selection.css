@@ -1,0 +1,166 @@
+@media(max-width: 1437px) {
+     .sidebar {
+
+          .perfil,
+          .ias {
+               scale: 75%;
+          }
+
+          .perfil {
+               position: relative;
+               bottom: 50px;
+          }
+
+          .ias {
+               position: relative;
+               bottom: 125px;
+          }
+
+     }
+
+}
+
+@media(max-width: 830px) {
+     .sidebar {
+          .perfil img {
+               width: 350px;
+          }
+
+          .ias {
+               position: relative;
+               top: -100px;
+          }
+     }
+
+}
+
+@media(max-width: 690px) {
+     .grid-container {
+          grid-template-areas:
+               'header2 header1 header1 header1 header1 header1'
+               'menu main main main main main'
+               'menu main main main main main';
+          gap: 5px;
+          padding: 10px;
+     }
+
+     .sidebar {
+          .perfil img {
+               width: 250px;
+               top: 20px;
+          }
+     }
+
+}
+
+@media (max-width: 640px) {
+     .header {
+          font-size: 50px;
+          display: flex;
+          justify-content: center;
+     }
+}
+
+@media (max-width: 500px) {
+     .header {
+          font-size: 35px;
+     }
+}
+
+@media (max-width: 405px) {
+     .header {
+          font-size: 25px;
+     }
+}
+
+@media (max-width: 340px) {
+     .header {
+          font-size: 40px;
+          width: 320px;
+     }
+
+     .item3 {
+          height: auto;
+     }
+
+     .item2 {
+          height: auto;
+     }
+
+     .grid-container {
+          grid-template-areas:
+               'header1 header1 header1 header1 header1 header1'
+               'menu main main main main main'
+               'header2 main main main main main';
+     }
+
+     .chat {
+          position: inherit;
+          justify-content: center;
+
+          .mensagens {
+               height: 500px;
+          }
+     }
+}
+
+@media(max-width: 315px) {
+     body {
+          overflow: hidden;
+     }
+
+     .grid-container {
+          grid-template-areas:
+               'header1 header1 header1 header1 header1 header1'
+               'main main main main main main'
+               'menu menu menu menu menu menu'
+               'header2 header2 header2 header2 header2 header2';
+          width: 314px;
+          height: 100%;
+     }
+
+     .item1 {
+          padding: 10px;
+
+          a {
+               font-size: 35px;
+          }
+     }
+
+     .item4 {
+          height: 390px;
+
+          .chat {
+               .mensagens {
+                    height: 240px;
+               }
+          }
+     }
+
+     .sidebar {
+          height: 310px;
+          justify-content: center;
+          align-items: center;
+          position: relative;
+          bottom: 30px;
+
+          .ias {
+               display: grid;
+               grid-template-columns: 150px 150px;
+               justify-items: center;
+               gap: 30px;
+          }
+
+          .ia {
+               height: 50px;
+               width: 150px;
+          }
+          .perfil{
+               bottom: 60px;
+          }
+     }
+
+     .item2 {
+          height: 50px;
+     }
+}

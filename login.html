@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+     <link rel="stylesheet" href="./src/css/login-style.css">
+     <link rel="stylesheet" href="./src/css/reset.css">
+     <link rel="stylesheet" href="./src/css/responsivo-login.css">
+
+     <title>AITHERAPIST | LOGIN</title>
+</head>
+
+<body>
+
+     <div class="container" id="container">
+          <div class="form-container sign-up">
+               <form id="registerForm">
+                    <h1>Criar uma conta</h1>
+                    <span>use seu email para se registrar</span>
+
+
+                    <input type="text" id="username" placeholder="Nome" required>
+
+
+                    <input type="email" id="email" placeholder="Email" required>
+
+
+                    <input type="password" id="password" placeholder="Senha" required>
+
+                    <a type="submit" onclick="cadastrarUser()">Registrar</a>
+               </form>
+          </div>
+          <div class="form-container sign-in">
+               <form id="loginForm">
+                    <h1>Entrar</h1>
+                    <span>use seu email e senha</span>
+
+                    <input type="email" id="email" placeholder="Email">
+                    <input type="password" id="password" placeholder="Senha">
+
+                    <a class="esqueceu senha" href="#">Esqueceu sua senha?</a>
+                    <a onclick="autenticarUser()" class="btn entrar">Entrar</a>
+               </form>
+          </div>
+          <div class="toggle-container">
+               <div class="toggle">
+                    <div class="toggle-panel toggle-left">
+                         <h1>Bem-vindo de volta!</h1>
+                         <p>Entre com seus dados para ter acesso completo as ferramentas</p>
+                         <a class="hidden" id="login">Entrar</a>
+                    </div>
+                    <div class="toggle-panel toggle-right">
+                         <h1>Olá! Novo Aqui?</h1>
+                         <p>Registre-se para desfrutar de tudo que o site pode lhe oferecer</p>
+                         <a class="hidden" id="register">Registrar</a>
+                    </div>
+               </div>
+          </div>
+     </div>
+
+     <script src="./src/javascript/login-script.js"></script>
+</body>
+
+</html>
