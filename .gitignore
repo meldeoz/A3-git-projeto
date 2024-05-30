@@ -1,1 +1,3 @@
 nodejs/node_modules/
+.env
+nodejs/.env

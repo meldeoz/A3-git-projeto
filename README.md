@@ -1,7 +1,7 @@
 # A3-git-projeto
 Repositório do projeto da A3 - 3° semestre 
 
-Integração do chat adicionada na Master (mudar de main para master)
+
 
 Luis Henrique Gil de Araújo RA: 820112718
 

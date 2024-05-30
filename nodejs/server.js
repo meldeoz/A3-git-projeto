@@ -4,10 +4,23 @@ const sql = require('mssql');
 const path = require('path');
 const cors = require('cors'); // Importe o módulo cors
 
+
+// Configurando dotenv
+require("dotenv").config();
+const PSIC_API_KEY = process.env.OPENAI_API_KEY;
+console.log(PSIC_API_KEY)
+
+
+
+
 const app = express();
 app.use(cors());
+app.options('*',cors()) 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
+
+const { OpenAI } = require("openai");
+const openai = new OpenAI(PSIC_API_KEY);
 
 // Servir arquivos estáticos (incluindo index.html)
 app.use(express.static(path.join(__dirname)));
@@ -24,38 +37,7 @@ const dbConfig = {
     },
 };
 
-//Endpoint para autenticar usuario
-/*app.get('/login', async (req, res) => {
-    const {email, password} = req.body;
 
-    if(!email || !password){
-        return res.status(400).json({ error: 'Todos os campos são obrigatórios'})
-    }
-
-    try{
-        // Conecte-se ao banco de dados
-        const pool = new sql.ConnectionPool(dbConfig);
-        await pool.connect();
-
-        // Verificar se o usuário existe
-        const queryCheckUser = `SELECT * FROM tbl_users WHERE user_email = @Email AND user_password = @password`;
-        const checkRequest = new sql.Request(pool);
-        const checkResult = await checkRequest
-            .input('Email', sql.NVarChar, email)
-            .query(queryCheckUser);
-            
-        if (checkResult.recordset.length > 0) {
-            pool.close();
-            return res.status(400).json({ error: 'Usuário com este e-mail já existe' });
-        }
-    } 
-
-    catch (error){
-        console.error(error);
-        res.status(500).json({ error: 'Erro no banco de dados' });
-    }
-})
-*/
 
 
 
@@ -141,9 +123,37 @@ app.post('/login', async (req, res) => {
 
 
 
+// OPENAI
+app.post("/pergunte-ao-psicologo", async (req, res) => {
+    try {
+      const prompt = req.body.prompt;
+      if (!prompt) {
+        return res.status(400).send("Prompt is required");
+      }
+      const completion = await openai.chat.completions.create({
+        model: "gpt-3.5-turbo",
+        messages: [{ role: "user", content: prompt }],
+        max_tokens: 200,
+      });
+      console.log(completion);
+      console.log(completion.choices[0].message.content)
+
+      const text = JSON.stringify(completion.choices[0].message.content)
+
+      res.json({text1: completion.choices[0].message.content, text2: "ola"});
+
+    } catch (error) {
+      console.error(error);
+      res.status(500).send("Erro ao processar a solicitação");
+    }
+  });
+
+
+
+
 
 // INICIAR SERVIDOR
-const PORT = 3000;
+const PORT = 2000;
 app.listen(PORT, () => {
     console.log(`Servidor rodando na porta ${PORT}`);
 });

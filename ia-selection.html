@@ -25,20 +25,22 @@
                     <h6 class="user-name">name</h6>
                </div>
                <div class="ias">
-                    <a href="#" class="ia luizo">Luizo</a>
-                    <a href="#" class="ia magda">Magda</a>
-                    <a href="#" class="ia joaquim">Joaquim</a>
-                    <a href="#" class="ia vera">Vera</a>
+                    <a href="#" class="ia luizo" onclick="luizo()">Luizo</a>
+                    <a href="#" class="ia magda" onclick="magda()">Magda</a>
+                    <a href="#" class="ia joaquim" onclick="joaquim()">Joaquim</a>
+                    <a href="#" class="ia vera" onclick="vera()">Vera</a>
                </div>
           </div>
      </div>
      <div class="item4">
           <div class="chat">
-               <div class="mensagens"></div>
+               <div id="historic" class="mensagens"></div>
                <div class="enviar">
                     <textarea class="input-mensagem" name="input-mensagem" id="input-mensagem" cols="30" rows="10"
                          placeholder="Insira sua mensagem aqui"></textarea>
-                    <input class="btn-enviar" type="submit" value="Enviar">
+                    <input id="div-enviar" class="btn-enviar" type="submit" value="Enviar" onclick="enviarMensagem()">
+                    <div class=""></div>
+                    
                </div>
           </div>
      </div>

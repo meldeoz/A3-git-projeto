@@ -25,7 +25,7 @@ async function cadastrarUser() {
      console.log(password)
 
      try {
-         const response = await fetch('http://localhost:3000/register', {
+         const response = await fetch('http://localhost:2000/register', {
              method: 'POST',
              headers: {
                  'Content-Type': 'application/json',
@@ -39,12 +39,25 @@ async function cadastrarUser() {
              alert('Usuário cadastrado com sucesso!');
              container.classList.remove("active");
 
+             formData.elements["username"].value = "";
+             formData.elements["email"].value = "";
+             formData.elements["password"].value = "";
+
          } else {
              alert(`Erro: ${data.error}`);
+             formData.elements["username"].value = "";
+             formData.elements["email"].value = "";
+             formData.elements["password"].value = "";
          }
      } catch (error) {
          console.error('Erro:', error);
          alert('Ocorreu um erro ao cadastrar o usuário.');
+
+         // Limpando os campos do formulário
+        formData.elements["username"].value = "";
+        formData.elements["email"].value = "";
+        formData.elements["password"].value = "";
+
      }
  };
 
@@ -63,7 +76,7 @@ async function cadastrarUser() {
      console.log(password)
 
      try {
-          const response = await fetch('http://localhost:3000/login', {
+          const response = await fetch('http://localhost:2000/login', {
               method: 'POST',
               headers: {
                   'Content-Type': 'application/json'
@@ -74,14 +87,16 @@ async function cadastrarUser() {
           const data = await response.json();
           console.log(data.sucesso )
           if (response.ok) {
-              console.log("Sucesso:", data.mensagem);
+              alert(data.mensagem);
+              const email = formData.elements["email"].value = "";
+              const password = formData.elements["password"].value = "";
 
               if(data.sucesso === true){
                     console.log(data.name)
                     window.location.href = `ia-selection.html?name=${data.name}`;   
 
               }
-              // Redirecionar o usuário para outra página ou realizar outra ação após a autenticação bem-sucedida
+              
           } else {
               console.error("Erro:", data.mensagem);
               // Exibir uma mensagem de erro para o usuário
